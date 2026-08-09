@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>מדריך בנייה ב-Wix — האתר החדש של כפר סילבר</title>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Secular+One&display=swap" rel="stylesheet">
+<style>
+:root{--violet:#3D2B6E;--violet-deep:#2C1F52;--lime:#A6CE39;--lime-deep:#7FA51F;--teal:#2FA98C;--teal-soft:#DDF1EA;--cream:#FAF8F2;--sand:#F1ECDF;--ink:#241E33;--ink-soft:#4C4560;--muted:#837B95;--line:#E4DFD2;--disp:"Secular One",sans-serif;--body:"Assistant",sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--body);font-size:16.5px;line-height:1.7}
+.wrap{max-width:880px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--disp);font-weight:400;color:var(--violet);line-height:1.2;margin:0}
+.mast{background:var(--violet-deep);color:#fff;padding:46px 0 40px}
+.mast h1{color:#fff;font-size:2rem}
+.mast p{color:#CFC8E8;margin:10px 0 0}
+.mast .tag{display:inline-block;background:rgba(166,206,57,.15);border:1px solid rgba(166,206,57,.5);color:var(--lime);border-radius:30px;padding:4px 14px;font-size:.8rem;font-weight:800;margin-bottom:14px}
+section{padding:38px 0 0}
+h2{font-size:1.5rem;border-bottom:3px solid var(--lime);padding-bottom:8px;margin-bottom:18px}
+h3{font-size:1.12rem;color:var(--teal);margin:22px 0 8px;font-family:var(--body);font-weight:800}
+p{margin:0 0 12px}
+.box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 24px;margin:14px 0;box-shadow:0 2px 4px rgba(36,30,51,.05)}
+.box.do{border-inline-start:4px solid var(--lime)}
+.box.warn{border-inline-start:4px solid #C0902E;background:#FDF8EE}
+ol,ul{margin:8px 0 14px;padding-inline-start:22px}
+li{margin-bottom:7px}
+code{background:var(--sand);border-radius:6px;padding:2px 8px;font-size:.86em;direction:ltr;display:inline-block}
+table{border-collapse:collapse;width:100%;font-size:.9rem;background:#fff;border-radius:10px;overflow:hidden;border:1px solid var(--line)}
+th,td{padding:10px 14px;text-align:right;border-bottom:1px solid var(--line)}
+th{background:var(--violet);color:#fff;font-weight:700}
+tr:last-child td{border-bottom:none}
+.sw{display:inline-block;width:15px;height:15px;border-radius:4px;vertical-align:-2px;margin-inline-start:6px;border:1px solid rgba(0,0,0,.12)}
+.foot{margin:50px 0 30px;padding-top:18px;border-top:2px solid var(--line);font-size:.82rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="mast"><div class="wrap">
+  <span class="tag">מסמך עבודה פנימי — לאופיר</span>
+  <h1>מדריך בנייה ב-Wix · האתר החדש של כפר סילבר</h1>
+  <p>כל צעד מוסבר למי שאינו מתכנת ואינו מעצב. בונים אתר חדש במקביל — האתר הקיים ממשיך לרוץ עד האישור וההחלפה.</p>
+</div></div>
+<div class="wrap">
+
+<section>
+<h2>0 · אסטרטגיית "בנייה במקביל" — בלי לסכן את הקיים</h2>
+<div class="box do">
+<ol>
+<li>ב-Wix Studio / החשבון הקיים: <b>Site actions ← Duplicate site</b> על האתר הקיים, או צור אתר חדש ריק. קרא לו <code>Kfar Silver NEW 2026</code>.</li>
+<li>עובדים רק על העותק החדש. האתר החי לא נוגעים בו בכלל.</li>
+<li>לתצוגה להנהלה בלי לפרסם: כפתור <b>Preview</b>, או <b>Share ← Get feedback link</b> (לינק צפייה זמני שוויקס נותן בלי דומיין).</li>
+<li>רק אחרי אישור סופי: <b>Publish</b> ואז העברת הדומיין kfarsilver.com לאתר החדש (Settings ← Domains ← Assign). מרגע זה הישן יורד — שומרים אותו כגיבוי בחשבון.</li>
+</ol>
+</div>
+<div class="box warn"><b>⚠️ קריטי — המשכיות מדידה:</b> באתר החדש חובה לשמר את אותם נתיבי עמודי תודה (<code>/תודה-על-ההרשמה-פנימייה</code>) או לעדכן את הטריגר ב-GTM ביום ההחלפה. אחרת מעקב ההמרות של גוגל אדס (שתיקנו ועובד!) יישבר. וגם: להתקין באתר החדש את אותו GTM — ראה סעיף 8.</div>
+</section>
+
+<section>
+<h2>1 · סיסטם דיזיין — צבעים וטיפוגרפיה (להגדיר פעם אחת)</h2>
+<p>ב-Wix: <b>Site Design (צד שמאל) ← Color & Text</b>. מגדירים שם את הפלטה — ומכאן והלאה כל אלמנט חדש "יירש" את הצבעים הנכונים.</p>
+<table>
+<tr><th>תפקיד</th><th>צבע</th><th>קוד</th><th>איפה משתמשים</th></tr>
+<tr><td>ראשי (Primary)</td><td>סגול כפר<span class="sw" style="background:#3D2B6E"></span></td><td><code>#3D2B6E</code></td><td>כותרות, פוטר, רקעים כהים, כפתור משני</td></tr>
+<tr><td>ראשי כהה</td><td>סגול עמוק<span class="sw" style="background:#2C1F52"></span></td><td><code>#2C1F52</code></td><td>רקע HERO, פוטר</td></tr>
+<tr><td>פעולה (Action)</td><td>ליים<span class="sw" style="background:#A6CE39"></span></td><td><code>#A6CE39</code></td><td><b>רק</b> כפתורי CTA והדגשות — כדי שהעין תדע "כאן לוחצים"</td></tr>
+<tr><td>Hover לפעולה</td><td>ליים כהה<span class="sw" style="background:#7FA51F"></span></td><td><code>#7FA51F</code></td><td>מצב ריחוף על כפתור</td></tr>
+<tr><td>משני (Accent)</td><td>טורקיז-שדה<span class="sw" style="background:#2FA98C"></span></td><td><code>#2FA98C</code></td><td>אייקונים, תגיות, כותרות-משנה קטנות</td></tr>
+<tr><td>רקע בסיס</td><td>קרם<span class="sw" style="background:#FAF8F2"></span></td><td><code>#FAF8F2</code></td><td>רקע העמודים (לא לבן קר!)</td></tr>
+<tr><td>רקע מתחלף</td><td>חול<span class="sw" style="background:#F1ECDF"></span></td><td><code>#F1ECDF</code></td><td>כל סקשן שני — יוצר קצב</td></tr>
+<tr><td>טקסט</td><td>דיו<span class="sw" style="background:#241E33"></span></td><td><code>#241E33</code></td><td>טקסט ראשי</td></tr>
+<tr><td>טקסט משני</td><td><span class="sw" style="background:#4C4560"></span></td><td><code>#4C4560</code></td><td>פסקאות תיאור</td></tr>
+</table>
+<h3>פונטים (קיימים בספריית Wix)</h3>
+<ul>
+<li><b>כותרות:</b> Secular One — בכל הגדלים. H1 בערך 52px, H2 בערך 34px, H3 בערך 22px.</li>
+<li><b>טקסט רץ:</b> Assistant — רגיל 17px, מודגש לכיתובים.</li>
+<li><b>כפתורים:</b> Assistant Bold, פינות עגולות מלאות (radius 50), padding נדיב.</li>
+</ul>
+<div class="box do"><b>חוק זהב:</b> ליים = פעולה בלבד. אם הכל ירוק, שום דבר לא בולט. בכל מסך צריך להיות כפתור ליים אחד ברור.</div>
+</section>
+
+<section>
+<h2>2 · מבנה האתר — 8 עמודים</h2>
+<table>
+<tr><th>עמוד</th><th>נתיב (Slug)</th><th>מקור בהדמיה</th></tr>
+<tr><td>ראשי</td><td><code>/</code></td><td>לשונית "ראשי"</td></tr>
+<tr><td>אודות</td><td><code>/about</code></td><td>"אודות"</td></tr>
+<tr><td>הפנימייה</td><td><code>/pnimiya</code></td><td>"הפנימייה"</td></tr>
+<tr><td>בית הספר והמשק</td><td><code>/school</code></td><td>"בית הספר והמשק"</td></tr>
+<tr><td>קבלה ושו"ת</td><td><code>/faq</code></td><td>"קבלה ושו"ת"</td></tr>
+<tr><td>חדשות (בלוג)</td><td><code>/news</code></td><td>"חדשות"</td></tr>
+<tr><td>רוסית</td><td><code>/ru</code></td><td>"RU"</td></tr>
+<tr><td>צור קשר</td><td><code>/contact</code></td><td>"צור קשר"</td></tr>
+</table>
+<p style="margin-top:10px">+ עמודי תודה (מוסתרים מהתפריט): <code>/תודה-על-ההרשמה-פנימייה</code> (לשמר את הקיים!) ועמוד תודה לטופס הרוסי.</p>
+<p><b>איך יוצרים עמוד:</b> Pages & Menu ← + Add Page ← בוחרים Blank ← משנים שם ו-Slug (תחת SEO Basics של העמוד).</p>
+</section>
+
+<section>
+<h2>3 · בניית הסקשנים — עמוד ראשי, סקשן-סקשן</h2>
+<p>ב-Wix כל עמוד בנוי מ-<b>Sections</b> (Add ← Section). לכל סקשן בהדמיה יש מקבילה פשוטה:</p>
+<table>
+<tr><th>#</th><th>סקשן</th><th>איך בונים ב-Wix</th></tr>
+<tr><td>1</td><td>HERO סגול + תג "פנימייה מצטיינת"</td><td>Section עם רקע <code>#2C1F52</code> (או תמונה + שכבת צבע Overlay סגולה 80%). טקסט H1 לבן, המילה "להצלחה" בליים. 2 כפתורים. את התג עושים עם Text קטן בתוך Box מעוגל.</td></tr>
+<tr><td>2</td><td>פס אמון (97% · 1,000+ · 240 · 1956)</td><td>בתוך ה-HERO למטה: 4 עמודות (Add ← Layout ← Columns). מספר ב-Secular One ליים, כיתוב קטן מתחת.</td></tr>
+<tr><td>3</td><td>"למה כפר סילבר" — 3 כרטיסים</td><td>Section רקע קרם ← 3 Columns ← בכל אחת Box לבן עם פינות מעוגלות, אימוג'י/אייקון, H3 וטקסט.</td></tr>
+<tr><td>4</td><td>וידאו "יום בחיי"</td><td>2 Columns: טקסט מימין, ומשמאל Video Player (Add ← Video) עם לינק יוטיוב. עד שיש סרטון — תמונה עם כפתור פליי.</td></tr>
+<tr><td>5</td><td>פס מספרים סגול</td><td>Section רקע <code>#3D2B6E</code> ← 4 Columns כמו פס האמון.</td></tr>
+<tr><td>6</td><td>עדויות — 3 ציטוטים</td><td>3 Columns עם Box לבן. בהמשך מחליפים לוידאו-עדויות (Video Player בכל כרטיס).</td></tr>
+<tr><td>7</td><td>רצועת ליד טורקיז + טופס</td><td>Section רקע <code>#2FA98C</code> ← 2 Columns: טקסט + טופס Wix Forms (סעיף 5).</td></tr>
+<tr><td>8</td><td>שו"ת מקוצר (5 שאלות)</td><td>Add ← Interactive ← <b>Accordion / FAQ</b>. זה האלמנט הקריטי ל-AI (סעיף 7).</td></tr>
+<tr><td>9</td><td>חדשות — 3 פוסטים אחרונים</td><td>אחרי הקמת הבלוג (סעיף 6): Add ← Blog ← Recent Posts, מסונן ל-3.</td></tr>
+</table>
+<div class="box do"><b>טיפ קצב:</b> רקעי הסקשנים מתחלפים — קרם ← חול ← קרם ← סגול ← קרם… זה מה שנותן לאתר תחושה מעוצבת בלי שום טריק.</div>
+<p>שאר העמודים משתמשים באותם רכיבים בדיוק (כרטיסים, Accordion, Columns, Timeline = רשימת שורות עם עיגול ליים) — הכל מופיע בהדמיה החיה, פשוט מעתיקים ממנה סקשן-סקשן.</p>
+</section>
+
+<section>
+<h2>4 · תפריט, פוטר וכפתורים צפים</h2>
+<ul>
+<li><b>Header:</b> לוגו מימין, תפריט במרכז, כפתור ליים "הרשמה לסיור" + מתג RU משמאל. מסמנים <b>Fixed/Sticky</b> כדי שיישאר צמוד למעלה.</li>
+<li><b>פוטר:</b> רקע סגול עמוק, 4 עמודות (זהות להדמיה) + שורת © עם <b>שנה נוכחית</b> — לתקן את ה-"© 2020" הקיים!</li>
+<li><b>וואטסאפ צף:</b> Add ← Contact & Forms ← WhatsApp button, מספר <code>972545090835</code>, מיקום פינה שמאל-תחתון.</li>
+<li><b>צ'אט/בוט:</b> Add Apps ← <b>Wix Chat</b>. תחת Settings ← Saved Replies מזינים את 10 השאלות הנפוצות (מעמוד השו"ת) ← Automated ← Welcome message: "היי! על מה תרצו לשמוע? קבלה / עלויות / יום בפנימייה". מפעילים ניתוב לוואטסאפ כשאין מענה.</li>
+</ul>
+</section>
+
+<section>
+<h2>5 · טפסים — ההגדרה המדויקת</h2>
+<h3>טופס ראשי (ראשי + צור קשר)</h3>
+<div class="box">
+<p><b>Add ← Contact & Forms ← בוחרים טופס בסיסי</b> ← עורכים שדות:</p>
+<ol>
+<li>שם ההורה — Short text, <b>חובה</b></li>
+<li>שם הילד/ה — Short text, רשות</li>
+<li>טלפון — Phone, <b>חובה</b></li>
+<li>אימייל — Email, רשות (בעמוד צור קשר בלבד)</li>
+<li>עולה לכיתה — Dropdown: ז׳/ח׳/ט׳/י׳/יא׳</li>
+<li>מה מעניין אתכם — Dropdown: פנימייה / בית ספר / נעל"ה / אחר (צור קשר בלבד)</li>
+<li>הסכמת וואטסאפ — Checkbox, <b>רשות ולא חובה!</b></li>
+</ol>
+</div>
+<div class="box warn"><b>⚠️ הלקח מהבדיקה שעשינו:</b> באתר הנוכחי צ'קבוקס הוואטסאפ מוגדר חובה — טופס בלעדיו פשוט לא נשלח, וזה מפיל לידים. בחדש: רשות. מי שלא סימן — מתקשרים.</div>
+<h3>הגדרות שליחה (בכל טופס: Settings ← Submission)</h3>
+<ol>
+<li><b>After submit ← Redirect to page:</b> עמוד התודה <code>/תודה-על-ההרשמה-פנימייה</code> — זה מה שמפעיל את המרת גוגל אדס!</li>
+<li><b>Email notifications:</b> למייל של צוות הקליטה + שלך.</li>
+<li>הטופס הרוסי — עותק מתורגם, עם עמוד תודה משלו <code>/spasibo</code>.</li>
+</ol>
+</section>
+
+<section>
+<h2>6 · אוטומציות (Wix Automations) — להגדיר 4</h2>
+<p><b>Dashboard ← Automations ← + New Automation:</b></p>
+<table>
+<tr><th>#</th><th>טריגר</th><th>פעולה</th><th>מטרה</th></tr>
+<tr><td>1</td><td>Form submitted</td><td>Send email למשפחה: "קיבלנו את פנייתכם — נחזור תוך יום עסקים" + לינק לשו"ת ולסרטון</td><td>ההורה מקבל אישור מיידי ותוכן לקרוא</td></tr>
+<tr><td>2</td><td>Form submitted</td><td>Notify team (מייל/SMS לצוות קליטה)</td><td>מענה מהיר = יותר סגירות</td></tr>
+<tr><td>3</td><td>Form submitted + לא טופל</td><td>Task/תזכורת אחרי 24 שעות</td><td>אף ליד לא נופל</td></tr>
+<tr><td>4</td><td>Chat message received (מחוץ לשעות)</td><td>הודעה אוטומטית + הפניה לוואטסאפ</td><td>מענה גם בערב</td></tr>
+</table>
+<p style="margin-top:8px">כל ליד נכנס אוטומטית גם ל-<b>Wix CRM (Contacts)</b> — שם מסמנים סטטוס: חדש / בתהליך / סיור נקבע / נרשם.</p>
+</section>
+
+<section>
+<h2>7 · מוכנות לחיפוש AI — מה שהדוח דרש</h2>
+<ul>
+<li><b>שו"ת ב-Accordion של Wix</b> — ויקס מזריק אוטומטית FAQ Schema (מבנה נתונים שמנועי AI קוראים). לכן חובה להשתמש ברכיב FAQ ולא בטקסט רגיל.</li>
+<li><b>כל תשובה = תשובה מלאה</b> (2-4 משפטים עם מספרים), לא "צרו קשר לפרטים".</li>
+<li><b>בלוג (Add Apps ← Wix Blog):</b> לפחות פוסט בחודש — מהפודקאסט המצולם יש חומר מוכן. עמוד "חדשות" מציג את הפיד.</li>
+<li><b>SEO לכל עמוד:</b> Pages ← SEO Basics ← Title בפורמט "הפנימייה | כפר הנוער סילבר" + Description של משפט-שניים עם המספרים.</li>
+</ul>
+</section>
+
+<section>
+<h2>8 · מדידה — לא לשכוח ביום ההחלפה</h2>
+<ol>
+<li>באתר החדש: Settings ← <b>Custom Code</b> ← להדביק את קוד GTM <code>GTM-WNSHJF5K</code> (Head + Body) — בדיוק כמו בקיים.</li>
+<li>לוודא שעמוד התודה בנתיב <b>זהה</b> לקיים. אם משנים — לעדכן את הטריגר ב-GTM באותו יום.</li>
+<li>אחרי ההחלפה: להריץ את אותה בדיקת טסט שעשינו (טופס "טסט") ולוודא ששני פינגי ההמרה נורים.</li>
+</ol>
+</section>
+
+<section>
+<h2>9 · סדר עבודה מוצע</h2>
+<ol>
+<li><b>שבוע 1:</b> הקמת אתר עותק, סיסטם דיזיין (סעיף 1), עמוד ראשי מלא.</li>
+<li><b>שבוע 2:</b> שאר העמודים + טפסים + אוטומציות. שליחת לינק Preview להנהלה + ההדמיה הזו.</li>
+<li><b>שבוע 3:</b> סבב תיקוני הנהלה, השלמת טקסטים חסרים (מסומנים [ להשלמה ] בהדמיה), צילומים ועדויות.</li>
+<li><b>יום ההחלפה:</b> Publish ← העברת דומיין ← בדיקת GTM וטופס ← מעקב יומיים.</li>
+</ol>
+</section>
+
+<div class="foot">מדריך עבודה פנימי · אוגוסט 2026 · צמוד להדמיה החיה (index) — כל סקשן במדריך קיים בהדמיה, פשוט משחזרים אחד-לאחד ב-Wix.</div>
+</div>
+</body>
+</html>
