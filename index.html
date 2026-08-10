@@ -199,20 +199,27 @@ footer a:hover{color:var(--lime)}
 .bot .chips button:hover{background:var(--teal-soft)}
 
 /* ===== responsive ===== */
+.burger{display:none;margin-inline-start:auto;background:var(--violet);color:var(--lime);border:none;border-radius:10px;width:44px;height:44px;font-size:1.3rem;cursor:pointer}
 @media(max-width:920px){
   .hero .wrap,.leadband .wrap{grid-template-columns:1fr}
   .cards3,.quotes,.news3{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:1fr 1fr}
   footer .wrap{grid-template-columns:1fr 1fr}
-  nav.menu{gap:0}
-  nav.menu a{padding:8px 10px;font-size:.85rem}
+  .burger{display:grid;place-items:center}
+  .nav{gap:12px}
+  .logo .t2{display:none}
+  nav.menu{display:none;position:absolute;top:100%;inset-inline:0;background:var(--cream);border-bottom:1px solid var(--line);box-shadow:0 18px 30px -14px rgba(36,30,51,.3);flex-direction:column;padding:10px 18px 16px;gap:2px}
+  nav.menu.open{display:flex}
+  nav.menu a{padding:12px 14px;font-size:1rem;border-radius:10px}
+  .nav .cta{display:none}
 }
 @media(max-width:600px){
   .cards3,.quotes,.news3,.steps,.trust .wrap,.numbers .wrap{grid-template-columns:1fr}
   .trust div{border:none;border-top:1px solid rgba(255,255,255,.1)}
   .leadform .row{grid-template-columns:1fr}
-  .nav{flex-wrap:wrap}
   section{padding:44px 0}
+  .hero{padding-top:50px}
+  .hero-img{min-height:220px}
 }
 </style>
 </head>
@@ -226,6 +233,7 @@ footer a:hover{color:var(--lime)}
       <span class="mark">כ</span>
       <span><span class="t1">כפר הנוער סילבר</span><br><span class="t2">קריית חינוך ע"ש ד"ר אבא הלל סילבר · רשת ORT העולמית</span></span>
     </a>
+    <button class="burger" onclick="document.getElementById('menu').classList.toggle('open')" aria-label="תפריט">☰</button>
     <nav class="menu" id="menu">
       <a href="#home" data-p="home" class="on" onclick="go('home')">ראשי</a>
       <a href="#about" data-p="about" onclick="go('about')">אודות</a>
@@ -651,6 +659,7 @@ function go(p){
   document.querySelectorAll('.page').forEach(x=>x.classList.remove('on'));
   var el=document.getElementById('p-'+p); if(el){el.classList.add('on')}
   document.querySelectorAll('#menu a').forEach(a=>a.classList.toggle('on',a.dataset.p===p));
+  document.getElementById('menu').classList.remove('open');
   window.scrollTo({top:0});
 }
 window.addEventListener('hashchange',()=>{var h=location.hash.replace('#','');if(h&&document.getElementById('p-'+h))go(h)});
