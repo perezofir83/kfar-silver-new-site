@@ -230,6 +230,7 @@ footer a:hover{color:var(--lime)}
   .hero{padding-top:50px}
   .hero-img{min-height:220px}
 }
+[id^="a-"]{scroll-margin-top:96px}
 .statgrid{text-align:center}
 .statb{background:transparent;border:none;cursor:pointer;color:inherit;font-family:inherit;padding:8px 6px;border-radius:12px;transition:background .15s}
 .statb:hover{background:rgba(255,255,255,.08)}
@@ -781,7 +782,7 @@ function go(p){ showPage(p); window.scrollTo({top:0}); }
 function goAnchor(id){
   var t=document.getElementById(id); if(!t) return false;
   var page=t.closest('.page'); if(page){ showPage(page.id.replace('p-','')); }
-  setTimeout(function(){ var y=t.getBoundingClientRect().top+window.pageYOffset-88; window.scrollTo({top:y,behavior:'smooth'}); },90);
+  requestAnimationFrame(function(){ setTimeout(function(){ try{ t.scrollIntoView({behavior:'smooth',block:'start'}); }catch(e){ t.scrollIntoView(); } },80); });
   return true;
 }
 function routeHash(){
