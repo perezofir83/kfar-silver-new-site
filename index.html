@@ -230,6 +230,14 @@ footer a:hover{color:var(--lime)}
   .hero{padding-top:50px}
   .hero-img{min-height:220px}
 }
+.statgrid{text-align:center}
+.statb{background:transparent;border:none;cursor:pointer;color:inherit;font-family:inherit;padding:8px 6px;border-radius:12px;transition:background .15s}
+.statb:hover{background:rgba(255,255,255,.08)}
+.statb b{display:block;font-family:var(--disp);font-size:2.4rem;color:var(--lime);line-height:1.1}
+.statb span{display:block;color:#CDE0CE;font-size:.92rem;margin-top:2px}
+.statb i{display:block;font-style:normal;font-size:.72rem;color:var(--lime);opacity:.85;margin-top:6px}
+.statdwrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.statd{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:16px 20px;margin-top:14px;color:#EAF3EA;font-size:.98rem;line-height:1.62}
 </style>
 </head>
 <body>
@@ -261,9 +269,9 @@ footer a:hover{color:var(--lime)}
   <div class="hero">
     <div class="wrap">
       <div class="htxt">
-        <span class="badge">🏅 פנימייה מצטיינת לשנת 2026 מטעם משרד החינוך</span>
+        <span class="badge" style="font-size:1.02rem;padding:9px 20px">🏅 פנימייה מצטיינת לשנת 2026 מטעם משרד החינוך</span>
         <h1>הבית שלך <em>להצלחה</em></h1>
-        <p class="lead">"בכפר סילבר השמיים כחולים יותר". במבואות אשקלון, בסביבה כפרית שלווה, בין דשאים, שדות ועצים, שוכן כפר הנוער סילבר. חלק מרשת החינוך אורט העולמית / קדימה מדע, מאז 1956.</p>
+        <p class="lead">"בכפר סילבר השמיים כחולים יותר". במבואות אשקלון, בסביבה כפרית שלווה, בין דשאים, שדות ועצים, שוכן כפר הנוער סילבר. שייך לרשת החינוך אורט העולמית / קדימה מדע, מאז 1956.</p>
         <div class="acts">
           <a class="btn lime" href="#contact" onclick="go('contact')">מזמינים אתכם לסיור בכפר</a>
           <a class="btn ghost" href="#dorm" onclick="go('dorm')">איך נראה יום בכפר?</a>
@@ -289,7 +297,7 @@ footer a:hover{color:var(--lime)}
       <div class="cards3">
         <div class="card"><div class="ic">🎓</div><h3>הצלחה לימודית אמיתית</h3><p>97% זכאות לבגרות, הרבה מעל הממוצע הארצי. ליווי אישי, קבוצות קטנות ומגמות מגוונות.</p></div>
         <div class="card"><div class="ic">🏡</div><h3>פנימייה שהיא בית</h3><p>מעטפת רגשית וטיפולית מלאה: מדריכים, עו"סים ואם בית. חוויה משפחתית, חברתית ולימודית, בקצב של כל חניך.</p></div>
-        <div class="card"><div class="ic">🚜</div><h3>משק חקלאי פעיל</h3><p>חוות הכפר: רפת ממוחשבת, דיר עיזים, חממות ומרכז כלבנות. התלמידים עובדים, מגדלים ולומדים אחריות בדרך שאי אפשר ללמד בכיתה.</p></div>
+        <div class="card"><div class="ic">🚜</div><h3>משק חקלאי פעיל</h3><p>חוות הכפר: רפת ממוחשבת, דיר עיזים, חממות ומרכז כלבנות. התלמידים עובדים ולומדים אחריות בדרך שאי אפשר ללמד בכיתה.</p></div>
       </div>
     </div>
   </section>
@@ -297,7 +305,7 @@ footer a:hover{color:var(--lime)}
   <section class="alt">
     <div class="wrap">
       <div class="kicker sec-kick">היו חלק מהחוויה</div>
-      <h2 class="sec">רגעים מהחיים בכפר</h2>
+      <h2 class="sec">רגעים של קהילה, עשייה וצמיחה</h2>
       <div class="gal">
         <img class="tall" src="https://static.wixstatic.com/media/354075_7f14d7a001a84d309ef2aee12c7e3b16~mv2.jpg/v1/fill/w_800,h_1000,al_c,q_85/adam.jpg" alt="תוכנית אדם ואדמה, עבודה חקלאית">
         <img src="https://static.wixstatic.com/media/a168be_136691691e9f4d299410e30c9d1d6091~mv2.jpg/v1/fill/w_800,h_600,al_c,q_85/a.jpg" alt="חניכים בכפר">
@@ -321,11 +329,17 @@ footer a:hover{color:var(--lime)}
   </section>
 
   <div class="numbers"><section style="padding:44px 0">
-    <div class="wrap">
-      <div><b>70</b><span>שנות חינוך, מאז 1956</span></div>
-      <div><b>14</b><span>מגמות לימוד</span></div>
-      <div><b>3</b><span>ארוחות חמות ביום, כשר</span></div>
-      <div><b>24/7</b><span>צוות זמין לכל חניך</span></div>
+    <div class="wrap statgrid">
+      <button type="button" class="statb" onclick="toggleStat('s1')"><b>70</b><span>שנות חינוך, מאז 1956</span><i>לפרטים ▾</i></button>
+      <button type="button" class="statb" onclick="toggleStat('s2')"><b>מעל 15</b><span>מגמות לימוד</span><i>לפרטים ▾</i></button>
+      <button type="button" class="statb" onclick="toggleStat('s3')"><b>3</b><span>ארוחות חמות ביום, כשר</span><i>לפרטים ▾</i></button>
+      <button type="button" class="statb" onclick="toggleStat('s4')"><b>24/7</b><span>צוות זמין לכל חניך</span><i>לפרטים ▾</i></button>
+    </div>
+    <div class="statdwrap">
+      <div id="s1" class="statd" hidden>הוקם בשנת 1956 ע"י הסתדרות ציוני אמריקה ואהבת הארץ, לקידום חקלאות, חדשנות ומצוינות.</div>
+      <div id="s2" class="statd" hidden>5 מגמות טכנולוגיות: הנדסת תוכנה (תכנון ותכנות מערכות), מדעי הרפואה (מערכות רפואיות), אמנויות העיצוב, מדיה ופרסום, מדעי התזונה ובישול מלונאי. בנוסף, עוד 14 מקצועות שניתן להגביר ל-5 יחידות לימוד.</div>
+      <div id="s3" class="statd" hidden>ארוחות חמות ומזינות המוגשות מדי יום במטבח כשר.</div>
+      <div id="s4" class="statd" hidden>צוות מקצועי ומיומן של מדריכים, זמין לחניכים/ות במהלך כל שהותם בפנימייה.</div>
     </div>
   </section></div>
 
@@ -345,7 +359,7 @@ footer a:hover{color:var(--lime)}
   <div class="leadband"><section>
     <div class="wrap">
       <div>
-        <h2>נשמח להכיר אתכם</h2>
+        <h2>בואו להצטרף אלינו</h2>
         <p style="font-size:1.1rem">השאירו פרטים ונחזור אליכם בהקדם, או הצטרפו לסיור היכרות בכפר: פוגשים את הצוות, רואים את הפנימייה ואת המשק, ושואלים הכל.</p>
         <p style="margin-top:14px;font-size:.95rem">מעדיפים לדבר עכשיו? <b>054-5090835</b>, קליטה כפר סילבר</p>
       </div>
@@ -365,11 +379,11 @@ footer a:hover{color:var(--lime)}
       <div class="kicker sec-kick">שאלות של הורים</div>
       <h2 class="sec">שאלות ותשובות נפוצות</h2>
       <div class="faq">
-        <details class="qa"><summary>למי מתאימה הפנימייה של כפר סילבר?</summary><div class="a">הפנימייה מתאימה לתלמידי כיתות ז׳-יב׳ שמחפשים מסגרת חינוכית-חברתית תומכת: ילדים שזקוקים לסביבה יציבה ומחבקת, משפחות עולים, ותלמידים שרוצים לשלב לימודים חזקים עם חיים חברתיים עשירים ועבודה במשק חקלאי.</div></details>
-        <details class="qa"><summary>כמה עולה הפנימייה?</summary><div class="a">שכר הלימוד והפנימייה מסובסדים על ידי משרד החינוך, וגובה ההשתתפות ההורית נקבע לפי מבחני הכנסה. בשיחת ההיכרות נבדוק יחד את הזכאות שלכם ונציג את העלות המדויקת למצבכם.</div></details>
-        <details class="qa"><summary>איך נראה סדר יום של חניך בפנימייה?</summary><div class="a">קימה מסודרת, ארוחת בוקר וירידה לבית הספר בתוך הכפר. אחר הצהריים, עבודה במשק, חוגים ושיעורי עזר. בערב, פעילות חברתית עם המדריכים, זמן חופשי וכיבוי אורות מותאם גיל. בעמוד "הפנימייה" מחכה פירוט מלא שעה-שעה.</div></details>
-        <details class="qa"><summary>מתי חוזרים הביתה?</summary><div class="a">החניכים נוסעים הביתה בסופי שבוע ובחגים, בהתאם ללוח היציאות השנתי. לחניכים שנשארים בכפר בחלק מהסופ"שים מתקיימת מסגרת שבת מלאה עם צוות.</div></details>
-        <details class="qa"><summary>איך מתקבלים? מה כולל התהליך?</summary><div class="a">ארבעה שלבים פשוטים: שיחת היכרות טלפונית ← סיור משפחתי בכפר ← יום מיון והתנסות לתלמיד ← ועדת קבלה ותשובה. מפורט בעמוד "קבלה ושו"ת".</div></details>
+        <details class="qa"><summary>האם כפר סילבר מתאים לי?</summary><div class="a">הפנימייה מיועדת לתלמידי ז׳ עד יב׳, שמחפשים מסגרת לימודית חינוכית תומכת המשלבת לימודים ברמה גבוהה יחד עם חיים חברתיים גבוהים ועבודה במשק חקלאי.</div></details>
+        <details class="qa"><summary>כמה זה עולה?</summary><div class="a">עלות הלימודים והפנימייה נקבעת באופן אישי בהתאם לנתוני המשפחה ולקריטריונים הרלוונטיים. במהלך תהליך ההיכרות נשמח להציג את הפרטים המלאים ולבחון את האפשרויות המתאימות עבורכם.</div></details>
+        <details class="qa"><summary>איך נראה סדר יום של חניך בפנימייה?</summary><div class="a">סדר היום בפנימייה משלב בין לימודים, חיי חברה וקהילה, עבודה חינוכית במשק החקלאי ופעילויות העשרה. החניכים נהנים מארוחות מסודרות, ליווי חינוכי לאורך היום וסביבה תומכת המאפשרת להם להתפתח, לרכוש עצמאות ולמצות את יכולותיהם.</div></details>
+        <details class="qa"><summary>כיצד משולבים החיים בכפר עם הזמן בבית?</summary><div class="a">החיים בפנימייה משלבים בין זמן משמעותי בכפר לבין זמן איכות בבית עם המשפחה. במהלך השנה החניכים יוצאים הביתה באופן קבוע, ובמקביל נהנים ממסגרת חינוכית וחברתית פעילה ומלווה לאורך כל השנה.</div></details>
+        <details class="qa"><summary>תספרו לי על תהליך הקבלה לכפר</summary><div class="a">מכירים בטלפון, מגיעים להתרשם מהכפר, משתתפים ביום היכרות והתנסות, ולאחר מכן מקבלים תשובה מוועדת הקבלה.</div></details>
       </div>
       <div class="center" style="margin-top:26px"><a class="btn violet" href="#faq" onclick="go('faq')">לכל השאלות והתשובות ←</a></div>
     </div>
@@ -393,13 +407,13 @@ footer a:hover{color:var(--lime)}
   <section>
     <div class="wrap">
       <div class="kicker sec-kick">אודות</div>
-      <h2 class="sec">כפר הנוער סילבר, מאז 1956</h2>
-      <p class="sec-sub">קריית חינוך ע"ש ד"ר אבא הלל סילבר, ליד אשקלון. חלק מרשת החינוך העולמית ORT / קדימה מדע.</p>
+      <h2 class="sec">כפר הנוער כפר סילבר מאז 1956</h2>
+      <p class="sec-sub">כפר הנוער כפר סילבר הוא קהילה חינוכית חקלאית המתקיימת בסביבה ירוקה, רב-תרבותית, תומכת ומוגנת.</p>
       <div style="display:grid;grid-template-columns:1.2fr .8fr;gap:36px">
         <div>
           <p>במבואות אשקלון, בסביבה כפרית שלווה, בין דשאים, שדות ועצים, שוכן כפר הנוער סילבר. הכפר הוקם בשנת 1956 על ידי הסתדרות ציוני אמריקה, ונקרא על שם ד"ר אבא הלל סילבר, מראשי התנועה.</p>
-          <p style="margin-top:14px">כיום מתחנכים בכפר כ-900 תלמידים, מתוכם כ-240 חניכי פנימייה. הכפר משלב בית ספר שש-שנתי, פנימייה חינוכית ומשק חקלאי פעיל, והוא חלק מרשת החינוך אורט העולמית / קדימה מדע.</p>
-          <p style="margin-top:14px">את שנת תשפ"א סיים בית הספר עם 97% זכאות לבגרות.</p>
+          <p style="margin-top:14px">מעל 1000 תלמידים/ות וכ-260 חניכי/ות פנימייה. הכפר משלב בית ספר שש-שנתי, פנימייה חינוכית ומשק חקלאי פעיל, והוא חלק מרשת החינוך אורט העולמית / קדימה מדע.</p>
+          <p style="margin-top:14px">ממוצע של מעל 90% זכאות לבגרות, כבר מספר שנים ברצף.</p>
           <img src="https://static.wixstatic.com/media/827c6d_0bb92e74e5c84a43a76c23b2d515770a~mv2_d_3840_2000_s_2.jpg/v1/fill/w_1600,h_700,al_c,q_85/wide2.jpg" alt="מרחבי כפר סילבר" style="border-radius:14px;margin-top:20px;box-shadow:var(--shadow)">
         </div>
         <div class="card"><h3>הערכים שלנו</h3><p style="margin-top:10px">הכפר מחנך לערכי הדמוקרטיה, אהבת אדם, ציונות ואהבת הארץ, ודוגל בקידום מדע, ספורט, חקלאות מתקדמת, חדשנות ומצוינות.</p><p style="margin-top:12px;font-weight:800;color:var(--violet)">"כל תלמיד יכול, ולכל אחד ואחת מגיעה הזדמנות שווה להצלחה ולמצוינות"</p></div>
@@ -432,29 +446,29 @@ footer a:hover{color:var(--lime)}
   <section>
     <div class="wrap">
       <div class="kicker sec-kick">הפנימייה</div>
-      <h2 class="sec">פנימייה שמרגישה בית</h2>
+      <h2 class="sec">מקום שמאמין בכל חניך/כה</h2>
       <p class="sec-sub">כ-240 חניכים, צוות חינוכי וטיפולי מלא, ומעטפת רחבה הכוללת תגבור לימודי אחר הצהריים, מבחר חוגים רחב ותוכניות מיוחדות.</p>
       <div class="cards3">
-        <div class="card"><div class="ic">🛏️</div><h3>מגורים</h3><p>חדרים של 2-4 חניכים בקבוצות גיל, עם מדריך צמוד לכל קבוצה ואם בית שדואגת שהכל יעבוד.</p></div>
-        <div class="card"><div class="ic">💚</div><h3>מעטפת טיפולית</h3><p>עובדים סוציאליים, מטפלים רגשיים ורכזי טיפול, תוכנית אישית לכל חניך, בשיתוף ההורים.</p></div>
-        <div class="card"><div class="ic">🍲</div><h3>אוכל וכשרות</h3><p>שלוש ארוחות חמות ביום בחדר האוכל של הכפר. המטבח כשר.</p></div>
-        <div class="card"><div class="ic">🚌</div><h3>הסעות ויציאות</h3><p>יציאה הביתה בסופי שבוע וחגים לפי לוח שנתי מסודר. [ פירוט קווי הסעה, להשלמה ]</p></div>
-        <div class="card"><div class="ic">⚽</div><h3>חוגים ופנאי</h3><p>ספורט, מוזיקה, מנהיגות ותנועות נוער, אחרי הלימודים, בתוך הכפר.</p></div>
-        <div class="card"><div class="ic">🌙</div><h3>שבתות בכפר</h3><p>מסגרת שבת מלאה לחניכים שנשארים, ארוחות חג, פעילות ומדריכים.</p></div>
+        <div class="card"><div class="ic">🛏️</div><h3>מגורים</h3><p>חדרים של 2-4 חניכים בחדר בהתאם לקבוצת הגיל, צוות צמוד ומקצועי שדואג לכל מה שצריך. כל חניך/כה זוכה למעטפת אישית וחמה הכוללת מדריכים צמודים, אם בית וצוות מקצועי שמלווה, תומך ודואג לאורך כל הדרך.</p></div>
+        <div class="card"><div class="ic">💚</div><h3>ליווי אישי ומקצועי</h3><p>עובדים סוציאליים, מטפלים רגשיים ורכזי טיפול, תוכנית אישית לכל חניך, בשיתוף ההורים.</p></div>
+        <div class="card"><div class="ic">🍲</div><h3>טעם של בית</h3><p>החניכים/ות מקבלים 3 ארוחות טעימות ומזינות שמבושלות במטבח של הכפר, האוכל טרי, טעים והמטבח כשר.</p></div>
+        <div class="card"><div class="ic">🚌</div><h3>דרכי הגעה הביתה</h3><p>החניכים/ות יוצאים הביתה בסופי שבוע וחגים על פי תכנית שנתית בהתחשב בלוח חגים ומועדים. הפנימייה נמצאת בקרבת תחבורה ציבורית נגישה.<br><span style="color:var(--teal);font-weight:800">🚆 סמוך לתחנת הרכבת אשקלון</span></p></div>
+        <div class="card"><div class="ic">⚽</div><h3>שעות הפנאי</h3><p>לחניכים/ות יש מגוון רחב של פעילויות בשעות הפנאי, ספורט, מוזיקה, מנהיגות ועוד. כל הפעילויות מתקיימות בכפר עם צוות מקצועי ומיומן.</p></div>
+        <div class="card"><div class="ic">🌙</div><h3>שבתות בכפר</h3><p>שבת שבה החניכים/ות נשארים לשבת בכפר ומקבלים חוויה מהנה ומעשירה הכוללת מגוון פעילויות וארוחת שבת מפנקת ומהנה.</p></div>
       </div>
     </div>
   </section>
   <section class="alt">
     <div class="wrap">
-      <h2 class="sec">יום בפנימייה, שעה-שעה</h2>
-      <p class="sec-sub">כדי שתדעו בדיוק לאן הילד שלכם מגיע.</p>
+      <h2 class="sec">איך נראה יום בפנימייה?</h2>
+      <p class="sec-sub">כך נראה יום ממוצע בפנימייה:</p>
       <div class="day">
-        <div class="item"><div class="hr">07:00</div><b>בוקר טוב כפר</b><p>השכמה, סידור חדרים וארוחת בוקר בחדר האוכל.</p></div>
-        <div class="item"><div class="hr">08:00-15:00</div><b>יום לימודים</b><p>בית הספר נמצא בתוך הכפר, הליכה של דקות מהפנימייה.</p></div>
-        <div class="item"><div class="hr">15:30</div><b>המשק החקלאי</b><p>עבודה בחווה לפי תורנויות, רפת, לול, גידולים.</p></div>
-        <div class="item"><div class="hr">17:00</div><b>חוגים ושיעורי עזר</b><p>מרכז למידה עם מורים, חוגי ספורט ומוזיקה.</p></div>
-        <div class="item"><div class="hr">19:00</div><b>ערב קבוצתי</b><p>ארוחת ערב, פעילות חברתית עם המדריך וזמן חופשי.</p></div>
-        <div class="item"><div class="hr">22:30</div><b>לילה טוב</b><p>כיבוי אורות מותאם גיל. צוות לילה זמין בכל שעה.</p></div>
+        <div class="item"><div class="hr">07:30</div><b>בוקר טוב כפר</b><p>מתחילים את היום בהתעוררות והתארגנות בוקר לקראת תחילת יום הלימודים.</p></div>
+        <div class="item"><div class="hr">08:00-15:00</div><b>יום לימודים</b><p>יום לימודים הכולל זמן הפסקה וארוחת צהריים חמה ומזינה בחדר האוכל של הכפר.</p></div>
+        <div class="item"><div class="hr">15:30</div><b>המשק החקלאי</b><p>עבודה במשק החקלאי לפי סבב תורנות.</p></div>
+        <div class="item"><div class="hr">17:00</div><b>חוגים ומרכז למידה</b><p>פעילות העשרה של חוגים ומרכז למידה.</p></div>
+        <div class="item"><div class="hr">19:00</div><b>ערב קבוצתי</b><p>ארוחת ערב, פעילות קבוצתית עם המדריך וזמן חופשי.</p></div>
+        <div class="item"><div class="hr">22:00</div><b>כיבוי אורות</b><p>צוות מדריכי לילה זמין לחניכים כולל בלילה במידת הצורך.</p></div>
       </div>
       <p style="font-size:.8rem;color:var(--muted);margin-top:10px;text-align:center">* לוח הזמנים להמחשה, יעודכן מול צוות הפנימייה לנוסח מדויק.</p>
     </div>
@@ -471,19 +485,19 @@ footer a:hover{color:var(--lime)}
 <main id="p-school" class="page">
   <section>
     <div class="wrap">
-      <div class="kicker sec-kick">בית הספר</div>
-      <h2 class="sec">בית ספר שש-שנתי בתוך הכפר</h2>
-      <p class="sec-sub">כ-900 תלמידים, כיתות ז׳-יב׳, תלמידי פנימייה ותלמידים אקסטרניים מהאזור לומדים יחד.</p>
+      <div class="kicker sec-kick">לומדים ועושים</div>
+      <h2 class="sec">בית הספר כפר סילבר</h2>
+      <p class="sec-sub">בית הספר הינו בית ספר 6-שנתי מכיתה ז׳ עד יב׳. לומדים בו כ-1000 תלמידים/ות, חניכי וחניכות הפנימייה ותלמידי ותלמידות מהמועצה האזורית חוף אשקלון. הלימודים מתקיימים באווירה חיובית, מכילה ומחזקת.</p>
       <div class="numbers" style="border-radius:var(--r);overflow:hidden"><section style="padding:38px 0">
         <div class="wrap">
           <div><b>97%</b><span>זכאות לבגרות</span></div>
-          <div><b>14</b><span>מגמות לימוד</span></div>
+          <div><b>מעל 15</b><span>מגמות לימוד</span></div>
           <div><b>ז׳-יב׳</b><span>שש-שנתי מלא</span></div>
-          <div><b>ORT</b><span>רשת חינוך עולמית</span></div>
+          <div><b style="font-size:1.5rem">WORLD ORT</b><span>רשת חינוך עולמית</span></div>
         </div>
       </section></div>
       <div class="cards3" style="margin-top:26px">
-        <div class="card"><div class="ic">🔬</div><h3>14 מגמות לימוד</h3><p>דיפלומטיה, חינוך גופני, חקלאות חכמה, ערבית, ביולוגיה, כימיה, פיזיקה, תקשורת, אמנויות, עיצוב, רוסית, ספרדית, מדעי המחשב והנדסת תוכנה.</p></div>
+        <div class="card"><div class="ic">🔬</div><h3>מעל 15 מגמות לימוד</h3><p>דיפלומטיה, חינוך גופני, חקלאות חכמה, ערבית, ביולוגיה, כימיה, פיזיקה, תקשורת, אמנויות, עיצוב, רוסית, ספרדית, מדעי המחשב והנדסת תוכנה.</p></div>
         <div class="card"><div class="ic">🧑‍🏫</div><h3>ליווי אישי</h3><p>מרכז למידה, שיעורי תגבור והכנה לבגרויות, לכל תלמיד לפי הצורך שלו.</p></div>
         <div class="card"><div class="ic">🚀</div><h3>קדימה מדע</h3><p>תוכניות מצוינות והעשרה של רשת אורט העולמית / קדימה מדע.</p></div>
       </div>
@@ -499,7 +513,7 @@ footer a:hover{color:var(--lime)}
       <div class="vidph" style="min-height:280px;background:linear-gradient(rgba(20,46,32,.45),rgba(20,46,32,.45)),url('https://static.wixstatic.com/media/354075_7f14d7a001a84d309ef2aee12c7e3b16~mv2.jpg/v1/fill/w_800,h_1000,al_c,q_85/adam.jpg') center/cover"><div class="play">▶</div><div class="cap">[ סרטון מהחווה החקלאית ]</div></div>
       <div>
         <div class="kicker sec-kick">המשק החקלאי · הייחוד שלנו</div>
-        <h2 class="sec">חווה אמיתית. אחריות אמיתית.</h2>
+        <h2 class="sec">לומדים מהשטח, גדלים מהחוויה.</h2>
         <p style="color:var(--ink-soft)">בכפר סילבר פועל משק חקלאי של ממש, רפת, לול ושטחי גידול. התלמידים עובדים בו בתורנויות, מגדלים בעלי חיים ויבולים, ולומדים דרך הידיים מה זו אחריות, התמדה ועבודת צוות.</p>
         <p style="color:var(--ink-soft);margin-top:12px">זהו הבדל שהורים מרגישים מיד: ילד שמטפל בבעל חיים כל בוקר לומד שיעור שאין בשום ספר.</p>
       </div>
@@ -517,9 +531,9 @@ footer a:hover{color:var(--lime)}
 <main id="p-faq" class="page">
   <section>
     <div class="wrap">
-      <div class="kicker sec-kick">הצטרפות לכפר</div>
-      <h2 class="sec">תהליך הקבלה, פשוט ושקוף</h2>
-      <p class="sec-sub">מרגע הפנייה ועד התשובה, אנחנו איתכם יד ביד.</p>
+      <div class="kicker sec-kick">כל מה שצריך לדעת</div>
+      <h2 class="sec">הצטרפות לכפר</h2>
+      <p class="sec-sub">בכמה צעדים פשוטים מתחילים את הדרך יחד, משיחת ההיכרות הראשונה ועד ההחלטה הסופית, נלווה אתכם לאורך כל התהליך.</p>
       <div class="steps">
         <div class="step"><h3>שיחת היכרות</h3><p>צוות הקליטה חוזר אליכם, מקשיב ועונה על שאלות ראשונות.</p></div>
         <div class="step"><h3>סיור משפחתי</h3><p>מגיעים לכפר, רואים את הפנימייה, בית הספר והמשק.</p></div>
@@ -531,29 +545,27 @@ footer a:hover{color:var(--lime)}
   </section>
   <section class="alt">
     <div class="wrap">
-      <h2 class="sec">כל השאלות והתשובות</h2>
+      <h2 class="sec">שאלות ותשובות</h2>
       <p class="sec-sub">כל מה שהורים שואלים אותנו, בכתב, בגובה העיניים. לא מצאתם? הבוט בפינה עונה מיד, או שאלו אותנו בוואטסאפ.</p>
       <h3 style="color:var(--teal);font-size:1.05rem;margin:20px 0 12px">קבלה והרשמה</h3>
       <div class="faq">
-        <details class="qa"><summary>לאילו כיתות אפשר להירשם?</summary><div class="a">ההרשמה פתוחה לכיתות ז׳-יא׳. קליטה לכיתה יב׳ נבחנת פרטנית.</div></details>
-        <details class="qa"><summary>כמה זמן לוקח תהליך הקבלה?</summary><div class="a">בדרך כלל 2-4 שבועות מהשיחה הראשונה ועד תשובת ועדת הקבלה, תלוי בתיאום הסיור ויום ההתנסות.</div></details>
-        <details class="qa"><summary>האם אפשר להצטרף באמצע שנה?</summary><div class="a">כן, במקרים מתאימים ובכפוף למקום פנוי. צרו קשר ונבדוק יחד.</div></details>
+        <details class="qa"><summary>מי יכול להצטרף לכפר?</summary><div class="a">ההרשמה מתחילה מכיתות ז׳ עד יא׳, הרשמה לכיתה יב׳ תיבחן באופן פרטני.</div></details>
+        <details class="qa"><summary>כמה זמן לוקח תהליך הקבלה?</summary><div class="a">תהליך הקבלה הינו אישי בהתאם לקצב של כל משפחה, אך לא יותר מ-14 ימי עסקים.</div></details>
+        <details class="qa"><summary>מה קורה אם רוצים להצטרף באמצע השנה?</summary><div class="a">אנו נבדוק כל מקרה לגופו, בכפוף לכך שיש מקום פנוי.</div></details>
       </div>
       <h3 style="color:var(--teal);font-size:1.05rem;margin:26px 0 12px">כסף וזכאויות</h3>
       <div class="faq">
-        <details class="qa"><summary>כמה עולה הפנימייה?</summary><div class="a">שכר הלימוד והפנימייה מסובסדים על ידי משרד החינוך. ההשתתפות ההורית נקבעת לפי מבחני הכנסה, ולכן שונה ממשפחה למשפחה. בשיחת ההיכרות נבדוק את זכאותכם וניתן מספר מדויק, בשקיפות מלאה.</div></details>
-        <details class="qa"><summary>אילו מלגות וסבסודים קיימים?</summary><div class="a">[ להשלמה מול הנהלת הכפר: מסלולי סבסוד, מלגות רווחה, זכאויות עולים ]</div></details>
-      </div>
+        <details class="qa"><summary>כמה עולה הפנימייה?</summary><div class="a">עלות הלימודים והפנימייה נקבעת באופן אישי בהתאם לנתוני המשפחה ולקריטריונים הרלוונטיים. במהלך תהליך ההיכרות נשמח להציג את הפרטים המלאים ולבחון את האפשרויות המתאימות עבורכם.</div></details>
+        </div>
       <h3 style="color:var(--teal);font-size:1.05rem;margin:26px 0 12px">חיי היומיום</h3>
       <div class="faq">
-        <details class="qa"><summary>איך שומרים על קשר עם הילד?</summary><div class="a">החניכים עם טלפונים אישיים (בכללי שימוש מותאמי גיל), וההורים בקשר שוטף עם המדריך והרכז. מתקיימים ימי הורים ועדכונים קבועים.</div></details>
-        <details class="qa"><summary>מה קורה אם הילד מתגעגע או מתקשה?</summary><div class="a">זה טבעי, במיוחד בהתחלה. הצוות הטיפולי מלווה כל חניך אישית, ובניית ההסתגלות נעשית יחד עם ההורים, בקצב של הילד.</div></details>
-        <details class="qa"><summary>האם יש שירותי בריאות בכפר?</summary><div class="a">[ להשלמה: מרפאה, אחות, קשר עם קופות החולים ]</div></details>
-        <details class="qa"><summary>מה רמת הכשרות בכפר?</summary><div class="a">המטבח כשר. [ להשלמה: פירוט רמת הכשרות ואורח החיים הדתי/מסורתי ]</div></details>
+        <details class="qa"><summary>איך שומרים על קשר עם הילד/ה?</summary><div class="a">ההורים נמצאים בקשר רציף עם צוות הפנימייה, והחניכים רשאים להיות עם טלפונים אישיים.</div></details>
+        <details class="qa"><summary>האם יש שירותי בריאות בכפר?</summary><div class="a">בכפר ישנה אחות במשרה מלאה שנמצאת כדי לתת מענה רפואי לחניכי הפנימייה במידת הצורך.</div></details>
+        <details class="qa"><summary>מה רמת הכשרות בכפר?</summary><div class="a">המטבח בכפר הינו כשר בהשגחת הרבנות.</div></details>
       </div>
       <h3 style="color:var(--teal);font-size:1.05rem;margin:26px 0 12px">עולים חדשים</h3>
       <div class="faq">
-        <details class="qa"><summary>הילד שלנו לא דובר עברית טוב. איך תעזרו לו?</summary><div class="a">לכפר ניסיון רב בקליטת עולים: אולפן, תגבור שפה, וצוות דובר רוסית. מסלול נעל"ה מיועד לנוער שעולה ארצה גם ללא ההורים.</div></details>
+        <details class="qa"><summary>איך הוא יצליח להשתלב?</summary><div class="a">לכפר שלנו מומחיות בקליטת עולים, ישנה כיתת אולפן, תגבור שפה, וצוות דובר רוסית.</div></details>
         <details class="qa"><summary>Есть ли информация на русском?</summary><div class="a ru">Да! У нас есть отдельная страница на русском языке, нажмите RU в меню, или свяжитесь с нами напрямую в WhatsApp.</div></details>
       </div>
     </div>
@@ -619,7 +631,7 @@ footer a:hover{color:var(--lime)}
         <h2 class="sec">בואו נדבר</h2>
         <p class="sec-sub" style="margin-bottom:22px">צוות הקליטה של כפר סילבר זמין לכל שאלה, בטלפון, בוואטסאפ או בטופס.</p>
         <div class="card" style="margin-bottom:16px"><h3>📞 קליטה כפר סילבר</h3><p style="margin-top:8px;font-size:1.3rem;font-weight:800;color:var(--violet)">054-5090835</p><p style="font-size:.88rem">ימים א׳-ה׳ 08:00-17:00 · בוואטסאפ עונים גם אחרי</p></div>
-        <div class="card"><h3>📍 איך מגיעים</h3><p style="margin-top:8px">כפר הנוער סילבר, ליד אשקלון<br>[ כאן תשובץ מפת Google עם ניווט Waze ]</p></div>
+        <div class="card"><h3>📍 איך מגיעים</h3><p style="margin-top:8px">כפר הנוער סילבר, ליד אשקלון<br><span style="color:var(--teal);font-weight:800">🚆 סמוך לתחנת הרכבת אשקלון</span><br>[ כאן תשובץ מפת Google עם ניווט Waze ]</p></div>
       </div>
       <form class="leadform" onsubmit="return demoForm(event)" style="box-shadow:var(--shadow)">
         <h3>השאירו פרטים ונחזור אליכם בהקדם</h3>
@@ -767,6 +779,7 @@ function go(p){
 }
 window.addEventListener('hashchange',()=>{var h=location.hash.replace('#','');if(h&&document.getElementById('p-'+h))go(h)});
 if(location.hash){var h=location.hash.replace('#','');if(document.getElementById('p-'+h))go(h)}
+function toggleStat(id){var el=document.getElementById(id);if(el){el.hidden=!el.hidden;}}
 function demoForm(e){e.preventDefault();alert('בהדמיה זו הטופס אינו שולח. באתר האמיתי: שליחה ← עמוד תודה ייעודי + מייל אוטומטי + התראה לצוות.');return false}
 </script>
 </body>
