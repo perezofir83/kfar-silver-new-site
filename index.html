@@ -138,7 +138,7 @@ h2.sec{font-size:2rem;color:var(--violet);margin-bottom:14px}
 .leadform .row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
 .leadform input,.leadform select{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;font-family:var(--body);font-size:.95rem;background:var(--cream)}
 .leadform input:focus{outline:2px solid var(--lime);border-color:var(--lime)}
-.leadform label.ck{display:flex;gap:10px;align-items:flex-start;font-size:.8rem;color:var(--muted);margin:12px 0 16px}
+.leadform label.ck{display:flex;gap:10px;align-items:flex-start;font-size:.8rem;color:var(--muted);margin:12px 0 16px}.leadform .ck input{width:auto;flex:none;margin:3px 0 0;padding:0}.ck span{flex:1}
 .leadform .btn{width:100%;text-align:center}
 .leadform .ok-note{font-size:.75rem;color:var(--muted);margin-top:10px;text-align:center}
 
@@ -663,7 +663,7 @@ footer a:hover{color:var(--lime)}
         <div class="row"><input placeholder="טלפון *" type="tel" required><input placeholder="אימייל *" type="email" required></div>
         <input id="job-field" placeholder="המשרה שמעניינת אותי (רשות)" style="margin-bottom:12px">
         <label class="file">קורות חיים * <span>(PDF או Word, עד 10MB)</span><input type="file" accept=".pdf,.doc,.docx" required></label>
-        <label class="ck"><input type="checkbox" required> קראתי את <a href="#privacy" onclick="go('privacy')">מדיניות הפרטיות</a>, ואני מסכים/ה שהפרטים ישמשו לבחינת המועמדות *</label>
+        <label class="ck"><input type="checkbox" required><span>קראתי את <a href="#privacy" onclick="go('privacy')">מדיניות הפרטיות</a>, ואני מסכים/ה שהפרטים ישמשו לבחינת המועמדות *</span></label>
         <button class="btn lime">שליחת מועמדות</button>
         <div class="ok-note">שליחת הטופס מובילה לעמוד תודה. הפרטים וקורות החיים מגיעים לתיבת הטפסים של האתר ולמייל Ellakb@wokm.org.</div>
       </form>
