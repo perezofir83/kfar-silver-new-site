@@ -102,7 +102,7 @@ h2.sec{font-size:2rem;color:var(--violet);margin-bottom:14px}
 .card h3{font-size:1.2rem;color:var(--violet);margin-bottom:8px}
 .card p{margin:0;color:var(--ink-soft);font-size:.97rem}
 .vidtt{position:relative;width:100%;aspect-ratio:16/9;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);background:#000}.vidtt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.jobs{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}@media(max-width:980px){.jobs{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.jobs{grid-template-columns:1fr}}.card.job .meta{font-weight:800;color:var(--teal);margin:4px 0 10px}.card.job .btn{margin-top:16px}.ticks{margin:10px 0 0;padding-inline-start:20px;color:var(--ink-soft);font-size:.95rem}.ticks li{margin-bottom:6px}.btn.ghostd{background:transparent;border:2px solid var(--violet);color:var(--violet)}.leadform .file{display:block;border:2px dashed var(--line);border-radius:14px;padding:14px 16px;margin-bottom:12px;font-weight:800;color:var(--ink);cursor:pointer}.leadform .file span{font-weight:400;color:var(--muted);font-size:.85rem}.leadform .file input{display:block;margin-top:8px;font-weight:400}
+.jobs{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}@media(max-width:980px){.jobs{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.jobs{grid-template-columns:1fr}}.card.job .meta{font-weight:800;color:var(--teal);margin:4px 0 10px}.card.job .btn{margin-top:16px}.card.jobwide{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.card.jobwide .btn{margin-top:0}.ticks{margin:10px 0 0;padding-inline-start:20px;color:var(--ink-soft);font-size:.95rem}.ticks li{margin-bottom:6px}.btn.ghostd{background:transparent;border:2px solid var(--violet);color:var(--violet)}.leadform .file{display:block;border:2px dashed var(--line);border-radius:14px;padding:14px 16px;margin-bottom:12px;font-weight:800;color:var(--ink);cursor:pointer}.leadform .file span{font-weight:400;color:var(--muted);font-size:.85rem}.leadform .file input{display:block;margin-top:8px;font-weight:400}
 .card.team{padding:0 0 24px;overflow:hidden}.card.team img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:center top;margin-bottom:18px}.card.team h3,.card.team p{padding:0 24px}.card.team .role{font-weight:800;color:var(--teal);margin-bottom:10px}.card.team .tq{margin-top:12px;font-weight:700;color:var(--violet)}
 
 .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
@@ -641,12 +641,7 @@ footer a:hover{color:var(--lime)}
     <div class="wrap">
       <h2 class="sec">משרות פתוחות</h2>
       <p class="sec-sub">דרושים/ות מורים/ות לשנת הלימודים תשפ"ז. בואו להיות חלק מצוות חינוכי מקצועי, ערכי ומשפיע בכפר סילבר.</p>
-      <div class="jobs">
-        <div class="card job"><h3>מורה למדעים</h3><p class="meta">משרה זמנית · שנת הלימודים תשפ"ז</p><a class="btn ghostd" href="#apply" onclick="pickJob(this)">להגשת מועמדות</a></div>
-        <div class="card job"><h3>מורה לספרות</h3><p class="meta">משרה זמנית · שנת הלימודים תשפ"ז</p><a class="btn ghostd" href="#apply" onclick="pickJob(this)">להגשת מועמדות</a></div>
-        <div class="card job"><h3>מורה ללשון</h3><p class="meta">משרה זמנית · שנת הלימודים תשפ"ז</p><a class="btn ghostd" href="#apply" onclick="pickJob(this)">להגשת מועמדות</a></div>
-        <div class="card job"><h3>מורה שילוב</h3><p class="meta">משרה זמנית · שנת הלימודים תשפ"ז</p><a class="btn ghostd" href="#apply" onclick="pickJob(this)">להגשת מועמדות</a></div>
-      </div>
+      <div class="card job jobwide"><div><h3>משרות הוראה</h3><p class="meta">משרה זמנית · שנת הלימודים תשפ"ז</p></div><a class="btn ghostd" href="#apply" onclick="pickJob(this)">להגשת מועמדות</a></div>
       <div class="cards3" style="margin-top:26px">
         <div class="card"><h3>תיאור התפקיד</h3><ul class="ticks"><li>הוראה וליווי תלמידים בסביבה חינוכית תומכת ומקדמת.</li><li>קידום למידה משמעותית והישגים לימודיים.</li><li>עבודה בשיתוף פעולה עם צוותי חינוך וטיפול.</li><li>יצירת קשר אישי ומעצים עם תלמידים.</li></ul></div>
         <div class="card"><h3>דרישות התפקיד</h3><ul class="ticks"><li>תעודת הוראה ורישיון הוראה.</li><li>ניסיון בהוראה: יתרון.</li><li>יכולת עבודה בצוות ויחסי אנוש מצוינים.</li><li>אחריות, יוזמה ומחויבות לעשייה חינוכית.</li></ul></div>
