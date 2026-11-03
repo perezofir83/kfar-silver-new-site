@@ -105,6 +105,7 @@ h2.sec{font-size:2rem;color:var(--violet);margin-bottom:14px}
 .jobs{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}@media(max-width:980px){.jobs{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.jobs{grid-template-columns:1fr}}.card.job .meta{font-weight:800;color:var(--teal);margin:4px 0 10px}.card.job .btn{margin-top:16px}.card.jobwide{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.card.jobwide .btn{margin-top:0}.ticks{margin:10px 0 0;padding-inline-start:20px;color:var(--ink-soft);font-size:.95rem}.ticks li{margin-bottom:6px}.btn.ghostd{background:transparent;border:2px solid var(--violet);color:var(--violet)}.leadform .file{display:block;border:2px dashed var(--line);border-radius:14px;padding:14px 16px;margin-bottom:12px;font-weight:800;color:var(--ink);cursor:pointer}.leadform .file span{font-weight:400;color:var(--muted);font-size:.85rem}.leadform .file input{display:block;margin-top:8px;font-weight:400}
 .card.team{padding:0 0 24px;overflow:hidden}.card.team img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:center top;margin-bottom:18px}.card.team h3,.card.team p{padding:0 24px}.card.team .role{font-weight:800;color:var(--teal);margin-bottom:10px}.card.team .tq{margin-top:12px;font-weight:700;color:var(--violet)}
 
+.photos{display:grid;gap:14px}.photos.p5{grid-template-columns:repeat(5,1fr)}.photos.p4{grid-template-columns:repeat(4,1fr)}.photos figure{margin:0}.photos img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:12px;display:block;box-shadow:var(--shadow)}.photos figcaption{margin-top:8px;font-weight:700;color:var(--violet);font-size:.95rem}@media(max-width:980px){.photos.p5,.photos.p4{grid-template-columns:repeat(2,1fr)}.photos.p5 figure:last-child{grid-column:span 2}.photos.p5 figure:last-child img{aspect-ratio:16/9}}
 .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .gal img{width:100%;height:230px;object-fit:cover;border-radius:12px;display:block;box-shadow:var(--shadow)}
 .gal .tall{grid-row:span 2;height:100%}
@@ -316,7 +317,7 @@ footer a:hover{color:var(--lime)}
         <img class="tall" src="https://static.wixstatic.com/media/354075_7f14d7a001a84d309ef2aee12c7e3b16~mv2.jpg/v1/fill/w_800,h_1000,al_c,q_85/adam.jpg" alt="תוכנית אדם ואדמה, עבודה חקלאית">
         <img src="https://static.wixstatic.com/media/a168be_136691691e9f4d299410e30c9d1d6091~mv2.jpg/v1/fill/w_800,h_600,al_c,q_85/a.jpg" alt="חניכים בכפר">
         <img src="https://static.wixstatic.com/media/354075_4ff512eafca34f7fbd9b0b82a229d784~mv2.jpg/v1/fill/w_800,h_600,al_c,q_85/c.jpg" alt="פעילות תלמידים">
-        <img src="https://static.wixstatic.com/media/d43a8c_6c876be4ec2b4547ba1eca18e189bf5d~mv2.jpg/v1/fill/w_1600,h_565,al_c,q_85/lawn-2026.jpg" alt="מדשאה ירוקה עם סככת צל בכפר סילבר">
+        <img src="img/campus/students-table.jpg" alt="תלמידים סביב שולחן בפעילות קבוצתית">
       </div>
       <p style="font-size:.8rem;color:var(--muted);margin-top:12px">התמונות מתוך האתר הנוכחי של הכפר. לקראת העלייה לאוויר יצולם סט תמונות עדכני.</p>
     </div>
@@ -464,6 +465,19 @@ footer a:hover{color:var(--lime)}
       </div>
     </div>
   </section>
+  <section>
+    <div class="wrap">
+      <h2 class="sec">הצצה לפנימייה</h2>
+      <p class="sec-sub">החדרים, פינות העבודה והמרחבים המשותפים שבהם החניכים/ות חיים כל יום.</p>
+      <div class="photos p5">
+        <figure><img src="img/campus/dorm-room.jpg" alt="חדר מגורים בפנימייה עם מיטות קומתיים" loading="lazy" width="1200" height="900"><figcaption>חדר מגורים</figcaption></figure>
+        <figure><img src="img/campus/dorm-desk.jpg" alt="פינת עבודה בחדר בפנימייה" loading="lazy" width="1200" height="900"><figcaption>פינת עבודה</figcaption></figure>
+        <figure><img src="img/campus/dorm-dining.jpg" alt="שולחן אוכל גדול במרחב המשותף בפנימייה" loading="lazy" width="1200" height="900"><figcaption>שולחן אוכל</figcaption></figure>
+        <figure><img src="img/campus/dorm-shower.jpg" alt="חדר רחצה בפנימייה" loading="lazy" width="1200" height="900"><figcaption>חדר רחצה</figcaption></figure>
+        <figure><img src="img/campus/dorm-club.jpg" alt="חניכים בפעילות קבוצתית בפנימייה" loading="lazy" width="1200" height="900"><figcaption>פעילות קבוצתית</figcaption></figure>
+      </div>
+    </div>
+  </section>
   <section class="alt">
     <div class="wrap">
       <h2 class="sec" id="a-dorm-day">איך נראה יום בפנימייה?</h2>
@@ -522,6 +536,25 @@ footer a:hover{color:var(--lime)}
         <h2 class="sec" id="a-school-farm">לומדים מהשטח, גדלים מהחוויה.</h2>
         <p style="color:var(--ink-soft)">בכפר סילבר משק חקלאי הכולל רפת, דיר עיזים, חממות, כלביה ומרחב חי. התלמידים עובדים בו בתורנויות, מטפלים בבעלי חיים ובגידולים החקלאיים ומטפחים את הנוי, ולומדים באמצעות עבודת האדמה על אחריות, התמדה ועבודת צוות.</p>
         <p style="color:var(--ink-soft);margin-top:12px">זהו הבדל שהורים מרגישים מיד: ילד שמטפל בבעל חיים כל בוקר לומד שיעור שאין בשום ספר.</p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="wrap">
+      <h2 class="sec">המתקנים בכפר</h2>
+      <div class="photos p5">
+        <figure><img src="img/campus/sports-hall.jpg" alt="אולם הספורט של כפר סילבר" loading="lazy" width="1200" height="900"><figcaption>אולם ספורט</figcaption></figure>
+        <figure><img src="img/campus/pool.jpg" alt="הבריכה בכפר סילבר" loading="lazy" width="1200" height="900"><figcaption>בריכה</figcaption></figure>
+        <figure><img src="img/campus/basketball-court.jpg" alt="מגרש כדורסל בכפר סילבר" loading="lazy" width="1200" height="900"><figcaption>מגרש כדורסל</figcaption></figure>
+        <figure><img src="img/campus/running-track.jpg" alt="מסלול הריצה בכפר סילבר" loading="lazy" width="1200" height="900"><figcaption>מסלול ריצה</figcaption></figure>
+        <figure><img src="img/campus/gym.jpg" alt="חדר הכושר בכפר סילבר" loading="lazy" width="1200" height="900"><figcaption>חדר כושר</figcaption></figure>
+      </div>
+      <h2 class="sec" style="margin-top:46px">רגעים מהכפר</h2>
+      <div class="photos p4">
+        <figure><img src="img/campus/students-trip.jpg" alt="תלמידים בטיול" loading="lazy" width="1200" height="900"></figure>
+        <figure><img src="img/campus/students-group.jpg" alt="תלמידים בתמונה קבוצתית" loading="lazy" width="1200" height="900"></figure>
+        <figure><img src="img/campus/students-lawn.jpg" alt="תלמידים על המדשאה בכפר" loading="lazy" width="1200" height="900"></figure>
+        <figure><img src="img/campus/students-jump.jpg" alt="תלמידות קופצות מול הקיר" loading="lazy" width="1200" height="900"></figure>
       </div>
     </div>
   </section>
