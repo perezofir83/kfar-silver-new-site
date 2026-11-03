@@ -105,6 +105,7 @@ h2.sec{font-size:2rem;color:var(--violet);margin-bottom:14px}
 .jobs{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}@media(max-width:980px){.jobs{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.jobs{grid-template-columns:1fr}}.card.job .meta{font-weight:800;color:var(--teal);margin:4px 0 10px}.card.job .btn{margin-top:16px}.card.jobwide{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.card.jobwide .btn{margin-top:0}.ticks{margin:10px 0 0;padding-inline-start:20px;color:var(--ink-soft);font-size:.95rem}.ticks li{margin-bottom:6px}.btn.ghostd{background:transparent;border:2px solid var(--violet);color:var(--violet)}.leadform .file{display:block;border:2px dashed var(--line);border-radius:14px;padding:14px 16px;margin-bottom:12px;font-weight:800;color:var(--ink);cursor:pointer}.leadform .file span{font-weight:400;color:var(--muted);font-size:.85rem}.leadform .file input{display:block;margin-top:8px;font-weight:400}
 .card.team{padding:0 0 24px;overflow:hidden}.card.team img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:center top;margin-bottom:18px}.card.team h3,.card.team p{padding:0 24px}.card.team .role{font-weight:800;color:var(--teal);margin-bottom:10px}.card.team .tq{margin-top:12px;font-weight:700;color:var(--violet)}
 
+.card.cardph{padding-top:0;overflow:hidden}.card .cph{display:block;max-width:none;width:calc(100% + 52px);margin:0 0 18px;margin-inline-start:-26px;height:auto;aspect-ratio:16/9;object-fit:cover}
 .photos{display:grid;gap:14px}.photos.p5{grid-template-columns:repeat(5,1fr)}.photos.p4{grid-template-columns:repeat(4,1fr)}.photos figure{margin:0}.photos img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:12px;display:block;box-shadow:var(--shadow)}.photos figcaption{margin-top:8px;font-weight:700;color:var(--violet);font-size:.95rem}@media(max-width:980px){.photos.p5,.photos.p4{grid-template-columns:repeat(2,1fr)}.photos.p5 figure:last-child{grid-column:span 2}.photos.p5 figure:last-child img{aspect-ratio:16/9}}
 .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .gal img{width:100%;height:230px;object-fit:cover;border-radius:12px;display:block;box-shadow:var(--shadow)}
@@ -456,25 +457,12 @@ footer a:hover{color:var(--lime)}
       <h2 class="sec" id="a-dorm-intro">מקום שמאמין בכל חניך/כה</h2>
       <p class="sec-sub">כ-260 חניכים, צוות חינוכי וטיפולי מלא, ומעטפת רחבה הכוללת תגבור לימודי אחר הצהריים, מבחר חוגים רחב ותוכניות מיוחדות.</p>
       <div class="cards3">
-        <div class="card"><div class="ic">🛏️</div><h3>מגורים</h3><p>חדרים של 3-4 חניכים בחדר בהתאם לקבוצת הגיל, צוות צמוד ומקצועי שדואג לכל מה שצריך. כל חניך/כה זוכה למעטפת אישית וחמה הכוללת מדריכים צמודים, אם בית וצוות מקצועי שמלווה, תומך ודואג לאורך כל הדרך.</p></div>
-        <div class="card"><div class="ic">💚</div><h3>ליווי אישי ומקצועי</h3><p>עובדים סוציאליים, מטפלים רגשיים ורכזי טיפול, תוכנית אישית לכל חניך, בשיתוף ההורים.</p></div>
-        <div class="card"><div class="ic">🍲</div><h3>טעם של בית</h3><p>החניכים/ות מקבלים 3 ארוחות ביום, מושקעות ומזינות, שמבושלות במטבח הכשר של הכפר.</p></div>
+        <div class="card cardph"><img class="cph" src="img/campus/dorm-room.jpg" alt="חדר מגורים בפנימייה" loading="lazy" width="1200" height="900"><h3>מגורים</h3><p>חדרים של 3-4 חניכים בחדר בהתאם לקבוצת הגיל, צוות צמוד ומקצועי שדואג לכל מה שצריך. כל חניך/כה זוכה למעטפת אישית וחמה הכוללת מדריכים צמודים, אם בית וצוות מקצועי שמלווה, תומך ודואג לאורך כל הדרך.</p></div>
+        <div class="card cardph"><img class="cph" src="img/campus/dorm-desk.jpg" alt="פינת עבודה בחדר בפנימייה" loading="lazy" width="1200" height="900"><h3>ליווי אישי ומקצועי</h3><p>עובדים סוציאליים, מטפלים רגשיים ורכזי טיפול, תוכנית אישית לכל חניך, בשיתוף ההורים.</p></div>
+        <div class="card cardph"><img class="cph" src="img/campus/dorm-dining.jpg" alt="שולחן אוכל במרחב המשותף בפנימייה" loading="lazy" width="1200" height="900"><h3>טעם של בית</h3><p>החניכים/ות מקבלים 3 ארוחות ביום, מושקעות ומזינות, שמבושלות במטבח הכשר של הכפר.</p></div>
         <div class="card"><div class="ic">🚌</div><h3>דרכי הגעה לכפר</h3><p>החניכים/ות יוצאים הביתה בסופי שבוע וחגים על פי תכנית שנתית בהתחשב בלוח חגים ומועדים. הפנימייה נמצאת בקרבת תחבורה ציבורית נגישה.<br><span style="color:var(--teal);font-weight:800">🚆 תחנת הרכבת אשקלון במרחק הליכה קצר מאוד</span></p></div>
-        <div class="card"><div class="ic">⚽</div><h3>שעות הפנאי</h3><p>לחניכים/ות יש מגוון רחב של פעילויות בשעות הפנאי - ספורט, מוזיקה, מנהיגות ועוד. כל הפעילויות מתקיימות בכפר עם צוות מקצועי ומיומן.</p></div>
-        <div class="card"><div class="ic">🌙</div><h3>שבתות בכפר</h3><p>שבת שבה החניכים/ות נשארים לשבת בכפר ומקבלים חוויה מהנה ומעשירה הכוללת מגוון פעילויות וארוחת שבת מפנקת ומהנה.</p></div>
-      </div>
-    </div>
-  </section>
-  <section>
-    <div class="wrap">
-      <h2 class="sec">הצצה לפנימייה</h2>
-      <p class="sec-sub">החדרים, פינות העבודה והמרחבים המשותפים שבהם החניכים/ות חיים כל יום.</p>
-      <div class="photos p5">
-        <figure><img src="img/campus/dorm-room.jpg" alt="חדר מגורים בפנימייה עם מיטות קומתיים" loading="lazy" width="1200" height="900"><figcaption>חדר מגורים</figcaption></figure>
-        <figure><img src="img/campus/dorm-desk.jpg" alt="פינת עבודה בחדר בפנימייה" loading="lazy" width="1200" height="900"><figcaption>פינת עבודה</figcaption></figure>
-        <figure><img src="img/campus/dorm-dining.jpg" alt="שולחן אוכל גדול במרחב המשותף בפנימייה" loading="lazy" width="1200" height="900"><figcaption>שולחן אוכל</figcaption></figure>
-        <figure><img src="img/campus/dorm-shower.jpg" alt="חדר רחצה בפנימייה" loading="lazy" width="1200" height="900"><figcaption>חדר רחצה</figcaption></figure>
-        <figure><img src="img/campus/dorm-club.jpg" alt="חניכים בפעילות קבוצתית בפנימייה" loading="lazy" width="1200" height="900"><figcaption>פעילות קבוצתית</figcaption></figure>
+        <div class="card cardph"><img class="cph" src="img/campus/dorm-club.jpg" alt="חניכים בפעילות קבוצתית בפנימייה" loading="lazy" width="1200" height="900"><h3>שעות הפנאי</h3><p>לחניכים/ות יש מגוון רחב של פעילויות בשעות הפנאי - ספורט, מוזיקה, מנהיגות ועוד. כל הפעילויות מתקיימות בכפר עם צוות מקצועי ומיומן.</p></div>
+        <div class="card cardph"><img class="cph" src="img/campus/dorm-shabbat.jpg" alt="חניכים במועדון בפנימייה" loading="lazy" width="1200" height="900"><h3>שבתות בכפר</h3><p>שבת שבה החניכים/ות נשארים לשבת בכפר ומקבלים חוויה מהנה ומעשירה הכוללת מגוון פעילויות וארוחת שבת מפנקת ומהנה.</p></div>
       </div>
     </div>
   </section>
